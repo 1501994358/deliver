@@ -11,14 +11,14 @@ def md5_str(_str):
     m.update(str(_str).encode(encoding='utf-8'))
     return m.hexdigest()
 
-def sha_256_str(_str):
-    m = sha256()
-    m.update(str(_str).encode(encoding='utf-8'))
-    return m.hexdigest()
-#
-if __name__ == '__main__':
-    print (md5_str('李阳'))
-    print(sha_256_str("李阳"))
+# def sha_256_str(_str):
+#     m = sha256()
+#     m.update(str(_str).encode(encoding='utf-8'))
+#     return m.hexdigest()
+# #
+# if __name__ == '__main__':
+#     print (md5_str('李阳'))
+#     print(sha_256_str("李阳"))
 
 
 from hashlib import md5
@@ -44,7 +44,7 @@ from datetime import date,datetime
 
 def read_excel():
     # 打开文件
-    workbook = xlrd.open_workbook(r'C:\Users\Administrator\Desktop\f.xlsx')
+    workbook = xlrd.open_workbook(r'C:\Users\Administrator\Desktop\ck.xlsx')
     # 获取所有的sheet
     print (workbook.sheet_names())
     # sheet_name1 = workbook.sheet_names()[0]
@@ -93,7 +93,7 @@ def write_excle():
     # 生成第一行
     for i in range(0, len(row0)):
         sheet4.write(0, i ,row0[i])
-    workbook = xlrd.open_workbook(r'C:\Users\Administrator\Desktop\f.xlsx')
+    workbook = xlrd.open_workbook(r'C:\Users\Administrator\Desktop\ck.xlsx')
     # print(sheet1)
     sheet1 = workbook.sheet_by_name("Sheet1")
     nrows = sheet1.nrows  # 获取表的行数
